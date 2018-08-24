@@ -1,0 +1,1556 @@
+@charset "utf-8";
+
+// Fonts
+
+@import './mixins/fonts.styl'
+webfont('Open Sans', 'opensans-regular', normal)
+webfont('Open Sans', 'opensans-semibold', 600)
+
+// Variables
+
+colorBlack = #303030
+colorLight = #f2f2f2
+colorBlue = #003260
+f-opensans = 'Open Sans', sans-serif
+
+// Default
+
+html
+	height 100%
+	*
+		max-height 1000000px
+		vertical-align top
+		box-sizing border-box
+
+	*:before
+	*:after
+		vertical-align top
+		box-sizing border-box
+
+body
+	overflow-x hidden
+	width 100%
+	height 100%
+	color colorBlack
+	font-size 12px
+	line-height 16px
+	font-family f-opensans
+	padding 0
+	margin 0
+	background #ffffff
+	-webkit-tap-highlight-color transparent
+
+p
+	text-indent 0
+	padding 0
+	margin 0 0 16px
+
+table
+	margin 0 0 16px
+	border-collapse collapse
+
+	td
+		padding 0
+
+:focus
+	outline none
+
+img
+	padding 0
+	margin 0
+	border 0
+
+a
+	color colorBlack
+	text-decoration none
+
+	&:hover
+		text-decoration none
+
+form
+	margin 0
+
+ul
+	margin 0 0 10px 16px
+	padding 0
+
+	li
+		padding 0
+		list-style none
+
+ol
+	margin 0 0 10px 18px
+	padding 0
+
+	li
+		padding 0 0 0 16px
+
+input
+select
+textarea
+	font-size 12px
+	font-family f-opensans
+	padding 0
+	margin 0
+	background none
+	border 0
+	box-sizing border-box
+
+textarea
+	overflow auto
+
+button
+	font-family f-opensans
+	margin 0
+	border 0
+	box-sizing border-box
+
+	&::-moz-focus-inner
+		padding 0
+		border 0
+
+::-webkit-input-placeholder
+	color #666666
+
+:-moz-placeholder
+	color #666666
+
+::-moz-placeholder
+	color #666666
+
+:-ms-input-placeholder
+	color #666666
+
+.img-cover
+.img-contain
+	display none !important
+
+// Libs
+
+@import '../css/libs.css'
+
+// Core
+
+.hero
+	overflow hidden
+	position relative
+	display flex
+	height 100%
+	self-align center
+	min-height 973px
+	max-height 1200px
+	background #00162b
+	
+	&--bg
+		position absolute
+		left 0
+		top 0
+		width 100%
+		height 100%
+		
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 0
+			z-index 1
+			width 100%
+			height 100%
+			background #00162b
+			opacity .65
+	
+	&__row
+		position relative
+		z-index 2
+		width 1400px
+		padding 117px 30px 116px
+		margin 0 auto
+	
+		&:before
+			content ''
+			position absolute
+			right 533px
+			bottom 0
+			width 2px
+			height 111px
+			background #ffffff
+		
+		&:after
+			content ''
+			position absolute
+			right 197px
+			bottom 0
+			width 2px
+			height 365px
+			background #ffffff
+		
+	&--lang
+		position absolute
+		right 30px
+		top 67px
+		font-size 0
+		
+		a
+			display inline-block
+			width 72px
+			height 72px
+			color #ffffff
+			font-size 22px
+			line-height 28px
+			text-align center
+			padding 17px 0 23px
+			margin-left 20px
+			border 2px solid #ffffff
+			border-radius 50%
+			transition border-width .1s ease-in, padding .1s ease-in
+			
+			&:hover
+			&:active
+			.is-active
+				border-width 4px
+				padding 15px 0 21px
+		
+	&--logo
+		position absolute
+		left 0
+		top 37px
+		display block
+		width 261px
+		height 120px
+		background url('../img/logo.svg') no-repeat 30px 30px
+		
+	&--title
+		position relative
+		width 816px
+		height 383px
+		display block
+		margin 0 0 47px
+		background url('../img/hero-title.svg') no-repeat 0 100%
+		
+		&:before
+			content ''
+			position absolute
+			left 50%
+			top 0
+			width 64px
+			height 64px
+			margin-left 136px
+			background #ffffff
+			border-radius 50%
+			box-shadow 0 0 20px 20px rgba(0, 0, 0, 0.1)
+		
+		&:after
+			content ''
+			position absolute
+			left 50%
+			top 91px
+			width 19px
+			height 19px
+			margin-left 127px
+			background #ffffff
+			border-radius 50%
+			
+	&--description
+		position relative
+		max-width 610px
+		color #ffffff
+		font-size 24px
+		line-height 33px
+		padding-left 30px
+		margin 0 0 33px
+		
+		&:before
+			content ''
+			position absolute
+			left 0
+			top 8px
+			width 2px
+			height calc(100% - 15px)
+			background #ffffff
+			
+	&__controls
+		font-size 0
+		margin 98px 0 0
+		
+	&--button
+		display inline-block
+		min-width 265px
+		color #ffffff
+		font-size 24px
+		line-height 30px
+		text-align center
+		cursor pointer
+		padding 21px 20px 25px
+		margin-right 35px
+		border-width 2px
+		border-style solid
+		border-radius 37px
+		transition border .1s ease-in, padding .1s ease-in, background-color .1s ease-in
+		
+		&:hover
+			border-width 4px
+			padding 19px 18px 23px
+		
+		&:active
+			border-width 3px
+			padding 20px 19px 24px
+		
+		&_play
+			background #c60c30
+			border-color #c60c30
+			
+			&:active
+				background-color #a00b28
+				border-color #a00b28
+				
+			i
+				position relative
+				display inline-block
+				width 42px
+				height 42px
+				margin -4px 14px -8px 0
+				background-color transparent
+				border 2px solid #ffffff
+				border-radius 50%
+				transition background-color .1s ease-in
+				
+				&:before
+					content ''
+					position absolute
+					left 50%
+					top 50%
+					margin -8px 0 0 -4px
+					border-top 8px solid transparent
+					border-bottom 8px solid transparent
+					border-left 12px solid #ffffff
+					transition border-color .1s ease-in
+					
+			&:hover
+				i
+					background-color #ffffff
+					
+					&:before
+						border-left-color #c60c30
+				
+			&:active
+				i
+					background-color #ffffff
+					
+					&:before
+						border-left-color #a00b28
+						
+		
+		&_more
+			background transparent
+			border-color #ffffff
+			
+	&--character
+		position absolute
+		right -90px
+		bottom 0
+		z-index 1
+		display block
+		width 361px
+		height 391px
+		background url('../img/hero-character.svg') no-repeat 100% 100%
+		
+	&--circle
+		position absolute
+		right 521px
+		bottom 215px
+		z-index 5
+		display block
+		width 25px
+		height 25px
+		background #ffffff
+		border-radius 50%
+		
+	&--plus
+		position absolute
+		right 169px
+		bottom 416px
+		z-index 5
+		display block
+		width 57px
+		height 57px
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 22px
+			top 0
+			width 13px
+			height 100%
+			background #ffffff
+			
+		&:after
+			transform rotate(90deg)
+			
+.video-bg
+	opacity 0
+	transition opacity .2s ease-in
+
+	video
+		position absolute
+		transform-origin 0 0
+		
+	&.is-visible
+		opacity 1
+		
+.title
+	position relative
+	z-index 2
+	display block
+	font-size 120px
+	line-height 120px
+	font-weight 600
+	padding 0
+	
+	span
+		position relative
+		z-index 1
+	
+	&:after
+		content attr(data)
+		position absolute
+		color colorLight
+		font-size 220px
+		line-height 220px
+		font-weight 600
+		white-space nowrap
+		text-transform uppercase
+		
+.about
+	position relative
+	z-index 1
+	
+	&__row
+		position relative
+		width 1400px
+		padding 220px 30px 76px
+		margin 0 auto
+	
+		&:before
+			content ''
+			position absolute
+			right 533px
+			top 0
+			width 2px
+			height 399px
+			background #f2f2f2
+		
+		&:after
+			content ''
+			position absolute
+			right 197px
+			top 0
+			width 2px
+			height 398px
+			background #f2f2f2
+	
+	.title
+		margin 0 0 57px 126px
+		
+		&:after
+			left 274px
+			top -89px
+		
+	&__content
+		position relative
+		
+		p
+			max-width 820px
+			font-size 19px
+			line-height 26px
+			margin 0 0 26px
+			
+	&-stats
+		font-size 0
+		margin 67px 0 0 -10px
+		
+		&--item
+			display inline-block
+			width 126px
+			text-align center
+			margin 0 14px 20px 0
+		
+		&--icon
+			display block
+			display flex
+			justify-content center
+			align-items center
+			width 82px
+			height 82px
+			margin 0 auto 22px
+			border 2px solid colorLight
+			border-radius 50%
+			
+			img
+				width auto
+				max-width 78px
+				height auto
+				max-height 78px
+			
+		p
+			font-size 19px
+			line-height 26px
+			margin 0 -5px
+		
+			
+	&--globe
+		position absolute
+		left 914px
+		top 43px
+		width 523px
+		height 521px
+		background url('../img/globe.gif') no-repeat 0 0
+		
+.history
+	position relative
+	z-index 2
+	padding 304px 0 0
+	border-bottom 2px solid #d3d3d3
+	
+	&:before
+		content ''
+		position absolute
+		right 50%
+		top -313px
+		width 2px
+		height 617px
+		margin-right -200px
+		background colorLight
+	
+	&:after
+		content ''
+		position absolute
+		right 50%
+		top -89px
+		width 2px
+		height 393px
+		margin-right -436px
+		background colorLight
+	
+	&--circle
+		position absolute
+		right 50%
+		top 36px
+		z-index 2
+		display block
+		width 30px
+		height 30px
+		margin-right -214px
+		background #003260
+		border-radius 50%
+	
+	&__row
+		background colorLight
+		
+	&__title
+		position relative
+		width 1400px
+		padding 1px 30px 91px
+		margin 0 auto
+
+	.title
+		margin -75px 0 50px 735px
+		
+		&:after
+			left -89px
+			top -45px
+		
+	&--character
+		position absolute
+		left 266px
+		top -304px
+		display block
+		width 391px
+		height 390px
+		background url('../img/history-character.svg') no-repeat 0 0
+		
+	&-elem
+		position absolute
+		left 3px
+		top -132px
+		z-index 1
+		display block
+		width 263px
+		height 263px
+		border 2px solid #d3d3d3
+		border-radius 50%
+		
+		&--animation
+			position absolute
+			left 0
+			top 0
+			display block
+			width 100%
+			height 100%
+			border-radius 50%
+			transform rotate(-45deg)
+			animation fly 5s linear infinite
+			
+			&:before
+				content ''
+				position absolute
+				left 50%
+				top -10px
+				width 20px
+				height 20px
+				margin-left -20px
+				background #c62032
+				border-radius 50%
+			
+		&:before
+			content ''
+			position absolute
+			left 21px
+			top 21px
+			width 217px
+			height 217px
+			border 2px solid #d3d3d3
+			border-radius 50%
+			
+		&--icon
+			position absolute
+			left 52px
+			top 52px
+			z-index 2
+			display block
+			display flex
+			justify-content center
+			align-items center
+			width 155px
+			height 155px
+			text-align center
+			background #ffffff
+			box-shadow 0 0 20px 20px rgba(0, 0, 0, 0.1)
+			border-radius 50%
+			
+	&-slider
+		&__col
+			width 1400px
+			font-size 0
+			padding 0 30px
+			margin 0 auto
+			
+		&__content
+			display inline-block
+			width calc(100% - 564px)
+			padding 0 80px 0 0
+			
+			p
+				font-size 19px
+				line-height 26px
+				margin 0 0 26px
+			
+		&--pic
+			display inline-block
+			width 564px
+			height 375px
+			margin 0 0 26px
+			
+.timeline
+	position relative
+	width 1340px
+	padding 0 100px
+	margin 98px auto 0
+	opacity 0
+	transition .2s ease
+	user-select none
+	
+	&-arrow
+		position absolute
+		bottom -21px
+		left 100px
+		z-index 5
+		display block
+		width 40px
+		height 40px
+		margin-left -20px
+		background #c62032
+		border-radius 50%
+	
+	&__list
+		overflow hidden
+	
+		&:before
+		&:after
+			content ''
+			position absolute
+			top 0
+			z-index 5
+			width 20px
+			height 64px
+			
+		&:before
+			left 100px
+			background linear-gradient(to right, rgba(242,242,242,1) 0%,rgba(255,255,255,0) 100%)
+			
+		&:after
+			right 100px
+			background linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(242,242,242,1) 100%)
+	
+	&.is-visible
+		opacity 1
+		
+		& ^[0]__item
+			transition all .3s ease
+		
+		& ^[0]-arrow
+			transition transform .3s ease
+	
+	&-prev
+	&-next
+		position absolute
+		top -6px
+		z-index 5
+		display block
+		width 72px
+		height 72px
+		cursor pointer
+		border-radius 50%
+		
+		&.is-disabled
+			cursor default
+		
+		svg
+			g 
+				transition stroke .1s ease-in
+			
+		&:not(.is-disabled):hover
+			svg
+				g
+					stroke colorBlack
+
+	&-prev
+		left 0
+		
+	&-next
+		right 0
+	
+	&__row
+		font-size 0
+		white-space nowrap
+		transition transform .3s ease
+
+	&__item
+		display inline-block
+		height 107px
+		color #d3d3d3
+		font-size 24px
+		line-height 30px
+		font-weight 600
+		text-align center
+		padding 15px 0
+		
+		span
+			cursor pointer
+		
+		&.is-current
+			color colorBlack
+			font-size 60px
+			line-height 60px
+			padding 0
+			
+@keyframes fly
+	0%
+		transform rotate(-45deg)
+		
+	100%
+		transform rotate(315deg)
+		
+.values
+	overflow hidden
+	position relative
+	
+	&--circle_big
+		position absolute
+		right 321px
+		top -163px
+		display block
+		width 249px
+		height 249px
+		background colorBlue
+		border-radius 50%
+	
+	&--circle
+		position absolute
+		right 493px
+		top 458px
+		z-index 1
+		display block
+		width 20px
+		height 20px
+		background colorBlue
+		border-radius 50%
+		
+	&--plus
+		position absolute
+		right 144px
+		top 341px
+		z-index 1
+		display block
+		width 57px
+		height 57px
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 22px
+			top 0
+			width 13px
+			height 57px
+			background #c62032
+			
+		&:after
+			transform rotate(90deg)
+	
+	&__row
+		position relative
+		max-width 1400px
+		padding 257px 30px 0
+		margin 0 auto
+		
+		&:before
+			content ''
+			position absolute
+			right 502px
+			top 0
+			width 2px
+			height 473px
+			background colorLight
+		
+		&:after
+			content ''
+			position absolute
+			right 171px
+			top 0
+			width 2px
+			height 100%
+			background colorLight
+		
+	.title
+		position relative
+		z-index 1
+		margin 0 0 124px 120px
+		
+		&:after
+			left -86px
+			top -62px
+			
+	&-we
+		position relative
+		width 650px
+		height 520px
+		margin 0 0 0 -30px
+		background url('../pic/values-we.png') no-repeat 50% 100%
+		background-size cover
+		
+	&-nav
+		position absolute
+		left 50%
+		top 0
+		z-index 5
+		width 365px
+		height 365px
+		margin -182px 0 0 -182px
+		background #ffffff
+		border-radius 50%
+		box-shadow 0 0 20px 20px rgba(0, 0, 0, .1)
+		
+		&--wheel
+			position absolute
+			left -15px
+			top -15px
+			z-index 5
+			display block
+			width 395px
+			height 395px
+			background url('../img/values-nav-wheel.svg') no-repeat 6px 13px
+			transition transform .2s ease-in
+				
+			&_1
+				transform rotate(-59deg)
+				
+			&_2
+				transform rotate(-52.5deg)
+				
+			&_3
+				transform rotate(-18.5deg)
+				
+			&_4
+				transform rotate(17.5deg)
+
+		&--title
+			display block
+			color colorBlue
+			font-size 160px
+			line-height 160px
+			font-weight 600
+			text-align center
+			text-transform uppercase
+			padding 104px 0 101px
+			
+		&--link
+			position absolute
+			left 100px
+			top -200px
+			display block
+			height 96px
+			color #d3d3d3
+			font-size 24px
+			line-height 30px
+			font-weight 600
+			text-decoration underline
+			white-space nowrap
+			cursor pointer
+			padding 37px 36px 25px
+			background-color transparent
+			border-radius 48px
+			border 2px solid transparent
+			transition all .2s ease-in
+				
+			&:hover
+			&:active
+				color colorBlack
+			
+			&:after
+				content ''
+				position absolute
+				background-repeat no-repeat
+				background-position 0 0
+				opacity 0
+				transition opacity .2s ease-in
+
+			&.is-active
+				color colorBlack
+				font-size 30px
+				line-height 36px
+				text-decoration none
+				padding 27px 40px 29px
+				background-color #ffffff
+				border-color #c62032
+			
+				&:after
+					opacity 1
+			
+			&_1
+				left 170px
+				top -296px
+				
+				&:after
+					left 22px
+					top 92px
+					width 85px
+					height 199px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI4NXB4IiBoZWlnaHQ9IjE5OXB4IiB2aWV3Qm94PSIwIDAgODUgMTk5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPjVEQjA5NjY4LTI0REMtNEUwRi04ODkwLTFGNEVGRUZBNzg5QjwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE0Ni4wMDAwMDAsIC0yNzI1LjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cG9seWxpbmUgaWQ9IkxpbmUtNCIgcG9pbnRzPSIxMjI5LjEyOTQ4IDI3MjYuOTE3ODYgMTIyOS4xMjk0OCAyNzkwLjQxNTg2IDExNDggMjkyMi41NDU3Ij48L3BvbHlsaW5lPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
+			
+			&_2
+				left 313px
+				top -187px
+				
+				&:after
+					left -126px
+					top 46px
+					width 127px
+					height 141px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMjdweCIgaGVpZ2h0PSIxNDFweCIgdmlld0JveD0iMCAwIDEyNyAxNDEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+MDVDNDE2OUMtNkZBNy00MzRELTk5NDgtRjFFNjU4OUY3NDkwPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPiAgICAgICAgPGcgaWQ9ImJ1dHRvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTQwLjAwMDAwMCwgLTQxMjguMDAwMDAwKSIgc3Ryb2tlPSIjQzYyMDMyIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iTGluZS00IiBwb2ludHM9IjEyNjUuMTY3MDUgNDEyOS42NDE4MSAxMjA1LjA4NzU1IDQxMjkuNjQxODEgMTE0MiA0MjY3Ij48L3BvbHlsaW5lPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
+			
+			&_3
+				left 416px
+				top -73px
+				
+				&:after
+					left -110px
+					top 45px
+					width 109px
+					height 76px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMDlweCIgaGVpZ2h0PSI3NnB4IiB2aWV3Qm94PSIwIDAgMTA5IDc2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPjcxQzRBRkY3LTA2MkQtNDJCQS05RTBGLUM5NDJFNzJBMkYwODwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTI1OS4wMDAwMDAsIC01NTkyLjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cG9seWxpbmUgaWQ9IkxpbmUtNCIgcG9pbnRzPSIxMzY2LjAxODIxIDU1OTMgMTMxOS4wMDkxMSA1NTkzIDEyNjEuMzI4ODYgNTY2Ni42Mjk2OCI+PC9wb2x5bGluZT4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
+
+			&_4
+				left 484px
+				top 34px
+				
+				&:after
+					left -124px
+					top 47px
+					width 124px
+					height 74px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMjRweCIgaGVpZ2h0PSI3NHB4IiB2aWV3Qm94PSIwIDAgMTI0IDc0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPkVEQjU3QzE5LTlFQkYtNEJCRi1CNDMxLUVCN0YxMTFDRDY0MzwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMxMy4wMDAwMDAsIC03MjAxLjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cGF0aCBkPSJNMTQzNi4yMDMzNiw3MjAyLjcxNTExIEwxMzc1LjI5NTQyLDcyNzMuNDEwMTIgQzEzMjcuOTkyNDQsNzI3My40MTAxMiAxMzA4LjI0OTcyLDcyNzMuNDEwMTIgMTMxNi4wNjcyOCw3MjczLjQxMDEyIiBpZD0iTGluZS00IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzc1LjMwMzc2NywgNzIzOC4wNjI2MTkpIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMzc1LjMwMzc2NywgLTcyMzguMDYyNjE5KSAiPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
+				
+		
+	&-content
+		position relative
+		z-index 2
+		min-height 649px
+		background #00162b url('../pic/values-content.jpg') no-repeat 50% 50%
+		background-size cover
+		
+		&:after
+			content ''
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			background #00162b
+			opacity .65
+			
+	&-slider
+		position relative
+		z-index 2
+		max-width 1400px
+		color #ffffff
+		padding 212px 0 1px
+		margin 0 auto
+		
+		&--title
+			display block
+			max-width 960px
+			min-height 66px
+			font-size 24px
+			line-height 33px
+			font-weight 600
+			text-align center
+			padding 0
+			margin 0 auto 54px
+			
+		&__grid
+			font-size 0
+			text-align center
+			margin 0 -25px
+			
+		&__col
+			position relative
+			display inline-block
+			min-height 111px
+			width 33.33%
+			padding 0 25px
+			margin 0 0 40px
+			
+		&--content
+			position relative
+			display table
+			width 100%
+			text-align left
+			padding 0 0 0 90px
+			
+			p
+				display table-cell
+				height 78px
+				font-size 19px
+				line-height 26px
+				vertical-align middle
+				margin 0
+				
+		&--icon
+			position absolute
+			left 0
+			top -1px
+			display block
+			width 72px
+			height 72px
+			border 2px solid #fff4f4
+			border-radius 50%
+			
+.play-icon
+	position relative
+	display block
+	width 60px
+	height 60px
+	cursor pointer
+	background rgba(0,50,96,.8)
+	border-radius 50%
+	transition background-color .1s ease-in
+	
+	&:before
+		content ''
+		position absolute
+		left 50%
+		top 50%
+		margin -8px 0 0 -3px
+		border-top 8px solid transparent
+		border-bottom 8px solid transparent
+		border-left 13px solid #ffffff
+	
+			
+.stories
+	position relative
+	padding 299px 0 20px
+	
+	&:before
+	&:after
+		content ''
+		position absolute
+		top 0
+		right 50%
+		width 2px
+		height 100%
+		background colorLight
+	
+	&:before
+		margin-right -166px
+	
+	&:after
+		margin-right -497px
+		
+	&--circle_1
+		position absolute
+		left 50%
+		top -36px
+		z-index 5
+		display block
+		width 20px
+		height 20px
+		margin-left 155px
+		background colorBlue
+		border-radius 50%
+		
+	&--plus
+		position absolute
+		right 50%
+		bottom 64px
+		z-index 5
+		display block
+		width 57px
+		height 57px
+		margin-right -524px
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 22px
+			top 0
+			width 13px
+			height 100%
+			background #c62032
+			
+		&:after
+			transform rotate(90deg)
+		
+	&--circle_2
+		position absolute
+		right 50%
+		bottom 115px
+		z-index 5
+		display block
+		width 20px
+		height 20px
+		margin-right -506px
+		background colorBlue
+		border-radius 50%
+	
+	&__title
+		position relative
+		z-index 1
+		max-width 1400px
+		padding 0 30px
+		margin 0 auto 153px
+		
+	.title
+		margin 0 0 0 670px
+		
+		&:after
+			left -396px
+			top -82px
+			
+	&__row
+		position relative
+		z-index 1
+			
+	&-slider
+		margin 0 0 58px
+		
+		.slick-prev
+		.slick-next
+			position absolute
+			top 216px
+			z-index 5
+			width 72px
+			height 72px
+			cursor pointer
+			padding 0
+			background transparent
+			border-radius 50%
+		
+			svg
+				g 
+					transition stroke .1s ease-in
+				
+			&:not(.is-disabled):hover
+				svg
+					g
+						stroke colorBlack
+			
+		.slick-prev
+			left 50%
+			margin-left -670px
+			
+		.slick-next
+			right 50%
+			margin-right -670px
+		
+		&__row
+			max-width 1400px
+			font-size 0
+			padding 72px 30px
+			margin 0 auto
+			
+		&__lc
+			display inline-block
+			
+			&:hover
+				.play-icon
+					background-color rgba(0,50,96,1)
+			
+		&--pic
+			position relative
+			display block
+			width 470px
+			height 365px
+			
+			.play-icon
+				position absolute
+				left 50%
+				top 50%
+				margin -15px 0 0 -24px
+				
+		&--text
+			position relative
+			z-index 1
+			display inline-block
+			min-width 360px
+			max-width 100%
+			color #ffffff
+			font-size 24px
+			line-height 33px
+			font-weight 600
+			padding 13px 30px 19px
+			margin -32px 0 0 -40px
+			
+		&__content
+			display inline-block
+			padding-top 3px
+			
+			ul
+				margin 0 0 -41px
+				
+				li
+					min-height 93px
+					margin 0 0 41px
+					
+			p
+				font-size 19px
+				line-height 26px
+				margin 0 0 26px
+				
+		&--name
+			display block
+			color colorBlue
+			font-size 34px
+			line-height 40px
+			font-weight 600
+			margin 0 0 16px
+			
+		&_l
+			& ^[-1]__lc
+				margin-left 192px
+
+			& ^[-1]--text
+				background #c60c30
+				
+			& ^[-1]__content
+				width 416px
+				margin-left 142px
+			
+		&_r
+			background-color colorLight
+
+			& ^[-1]__lc
+				margin-left 100px
+
+			& ^[-1]--text
+				background colorBlue
+				
+			& ^[-1]__content
+				width 423px
+				margin-left 192px
+				
+.people
+	position relative
+	padding 205px 0 51px
+	
+	&:before
+	&:after
+		content ''
+		position absolute
+		top 0
+		right 50%
+		width 2px
+		background colorLight
+	
+	&:before
+		height 427px
+		margin-right -166px
+	
+	&:after
+		height 594px
+		margin-right -497px
+	
+	&__title
+		position relative
+		z-index 1
+		max-width 1400px
+		padding 0 30px
+		margin 0 auto 193px
+		
+	.title
+		margin 0 0 0 84px
+		
+		&:after
+			left -200px
+			top -68px
+			
+	&__row
+		position relative
+		padding 0 30px
+		background url('../pic/people-bg.jpg') no-repeat 50% 0
+		
+	&__content
+		position relative
+		max-width 1340px
+		height 1596px
+		margin 0 auto
+		
+	&--photo
+		overflow hidden
+		position absolute
+		z-index 5
+		display block
+		width 117px
+		height 156px
+		cursor pointer
+	
+		&:before
+			content ''
+			position absolute
+			left -4px
+			top -4px
+			width calc(100% + 8px)
+			height calc(100% + 8px)
+			border 4px solid #c60c30
+			opacity 0
+			transition all .2s ease-in
+			
+		&:hover
+		&:active
+			&:before
+				left 0
+				top 0
+				width 100%
+				height 100%
+				opacity 1
+				
+.footer
+	position relative
+	height 677px
+	
+	&:before
+	&:after
+		content ''
+		position absolute
+		right 50%
+		bottom 0
+		width 2px
+		background colorLight
+		
+	&:before
+		height 553px
+		margin-right 191px
+		
+	&:after
+		height 604px
+		margin-right -164px
+		
+	&--elem-v
+		position absolute
+		right 50%
+		bottom 0
+		display block
+		width 2px
+		height 738px
+		margin-right -499px
+		background colorLight
+		
+	&--elem-h
+		position absolute
+		right 50%
+		top 159px
+		z-index 3
+		display block
+		width 642px
+		height 14px
+		margin-right -630px
+		background colorBlue
+		
+	&--circle
+		position absolute
+		right 50%
+		top 115px
+		z-index 3
+		display block
+		width 20px
+		height 20px
+		margin-right 182px
+		background colorBlue
+		border-radius 50%
+		
+	&--circle_big
+		position absolute
+		right 50%
+		bottom 136px
+		z-index 3
+		display block
+		width 30px
+		height 30px
+		margin-right -178px
+		background colorBlue
+		border-radius 50%
+	
+	&--line
+		position absolute
+		left 0
+		z-index 1
+		display block
+		top 240px
+		width 100%
+		height 199px
+		background #c60c30
+		
+	&--character
+		position absolute
+		left 50%
+		top 0
+		z-index 2
+		display block
+		width 310px
+		height 563px
+		margin-left -612px
+		background url('../img/footer-character.svg') no-repeat 0 0
+		
+	&--title
+		display block
+		position absolute
+		left 50%
+		top 307px
+		z-index 2
+		display block
+		color #ffffff
+		font-size 150px
+		line-height 150px
+		font-weight 600
+		margin-left -218px
+
+.modal
+	position absolute
+	left 50%
+	top 0
+	z-index 1010
+	width 800px
+	font-size 0
+	padding 59px 58px 65px
+	margin-left -400px
+	background #ffffff
+	box-shadow 0 2px 20px 20px rgba(0, 0, 0, .1)
+	transition opacity .3s ease-in, transform .3s ease-in, visibility .3s ease-in
+	transform translateY(20px)
+	opacity 0
+	visibility hidden
+	
+	&.is-opened
+		transform translateY(0)
+		opacity 1
+		visibility visible
+
+	&--close
+		position absolute
+		right 10px
+		top 10px
+		display block
+		width 66px
+		height 64px
+		cursor pointer
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 50%
+			top 50%
+			width 34px
+			height 2px
+			margin -1px 0 0 -17px
+			background #d3d3d3
+			transition background-color .1s ease-in
+			
+		&:hover
+		&:active
+			&:before
+			&:after
+				background-color colorBlack
+		
+		&:before
+			transform rotate(-45deg)
+		
+		&:after
+			transform rotate(45deg)
+			
+	&__lc
+		display inline-block
+		width 150px
+		
+	&--pic
+		margin 0 0 58px
+		
+		img
+			width 100%
+			height auto
+			
+	.play-icon
+		margin 0 auto 17px
+		background-color #c60c30
+		
+		&:hover
+			background-color rgba(198,12,48,.8)
+			
+	&--desc
+		display block
+		color #d3d3d3
+		font-size 19px
+		line-height 26px
+		text-align center
+		margin 0 0 26px
+		
+	&__rc
+		display inline-block
+		width 534px
+		width calc(100% - 150px)
+		padding 0 0 0 52px
+		
+		p
+			color #373737
+			font-size 19px
+			line-height 26px
+			margin 0 0 26px
+			
+	&--name
+		display block
+		color #154277
+		font-size 34px
+		line-height 40px
+		font-weight 600
+		margin -14px 0 36px
