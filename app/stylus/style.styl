@@ -136,8 +136,7 @@ button
 	position relative
 	display flex
 	height 100%
-	self-align center
-	min-height 973px
+	min-height 868px
 	max-height 1200px
 	background #00162b
 	
@@ -158,48 +157,53 @@ button
 			height 100%
 			background #00162b
 			opacity .65
+			
+	&__col
+		align-self center
 	
 	&__row
 		position relative
 		z-index 2
-		width 1400px
-		padding 117px 30px 116px
+		display flex
+		width 1110px
+		align-items center
+		padding 132px 30px 114px
 		margin 0 auto
 	
 		&:before
 			content ''
 			position absolute
-			right 533px
+			right 396px
 			bottom 0
 			width 2px
-			height 111px
+			height 106px
 			background #ffffff
 		
 		&:after
 			content ''
 			position absolute
-			right 197px
+			right 151px
 			bottom 0
 			width 2px
-			height 365px
+			height 384px
 			background #ffffff
 		
 	&--lang
 		position absolute
 		right 30px
-		top 67px
+		top 46px
 		font-size 0
 		
 		a
 			display inline-block
-			width 72px
-			height 72px
+			width 52px
+			height 52px
 			color #ffffff
-			font-size 22px
-			line-height 28px
+			font-size 16px
+			line-height 22px
 			text-align center
-			padding 17px 0 23px
-			margin-left 20px
+			padding 11px 0 15px
+			margin-left 18px
 			border 2px solid #ffffff
 			border-radius 50%
 			transition border-width .1s ease-in, padding .1s ease-in
@@ -208,79 +212,81 @@ button
 			&:active
 			.is-active
 				border-width 4px
-				padding 15px 0 21px
+				padding 9px 0 13px
 		
 	&--logo
 		position absolute
 		left 0
-		top 37px
+		top 17px
 		display block
-		width 261px
-		height 120px
+		width 223px
+		height 109px
 		background url('../img/logo.svg') no-repeat 30px 30px
+		background-size 163px 49px
 		
 	&--title
 		position relative
-		width 816px
-		height 383px
+		width 675px
+		height 317px
 		display block
-		margin 0 0 47px
+		margin 0 0 51px
 		background url('../img/hero-title.svg') no-repeat 0 100%
+		background-size 675px auto
 		
 		&:before
 			content ''
 			position absolute
 			left 50%
 			top 0
-			width 64px
-			height 64px
-			margin-left 136px
+			width 53px
+			height 53px
+			margin-left 112px
 			background #ffffff
 			border-radius 50%
-			box-shadow 0 0 20px 20px rgba(0, 0, 0, 0.1)
 		
 		&:after
 			content ''
 			position absolute
 			left 50%
-			top 91px
-			width 19px
-			height 19px
-			margin-left 127px
+			top 75px
+			width 16px
+			height 16px
+			margin-left 105px
 			background #ffffff
 			border-radius 50%
 			
 	&--description
 		position relative
 		max-width 610px
+		min-height 120px
 		color #ffffff
-		font-size 24px
-		line-height 33px
-		padding-left 30px
-		margin 0 0 33px
+		font-size 22px
+		line-height 30px
+		padding-left 24px
+		margin 0 0 30px
 		
 		&:before
 			content ''
 			position absolute
 			left 0
-			top 8px
+			top 6px
 			width 2px
-			height calc(100% - 15px)
+			height calc(100% - 21px)
 			background #ffffff
 			
 	&__controls
 		font-size 0
-		margin 98px 0 0
+		margin 64px 0 0
 		
 	&--button
 		display inline-block
-		min-width 265px
+		min-width 240px
 		color #ffffff
-		font-size 24px
-		line-height 30px
+		font-size 22px
+		line-height 28px
 		text-align center
 		cursor pointer
-		padding 21px 20px 25px
+		padding 15px 20px 21px
 		margin-right 35px
 		border-width 2px
 		border-style solid
@@ -289,17 +295,22 @@ button
 		
 		&:hover
 			border-width 4px
-			padding 19px 18px 23px
+			padding 13px 18px 19px
 		
 		&:active
 			border-width 3px
-			padding 20px 19px 24px
+			padding 14px 19px 20px
 		
 		&_play
+			padding 17px 20px 21px
 			background #c60c30
 			border-color #c60c30
-			
+		
+			&:hover
+				padding 15px 18px 19px
+		
 			&:active
+				padding 16px 19px 20px
 				background-color #a00b28
 				border-color #a00b28
 				
@@ -308,7 +319,7 @@ button
 				display inline-block
 				width 42px
 				height 42px
-				margin -4px 14px -8px 0
+				margin -5px 22px -9px 0
 				background-color transparent
 				border 2px solid #ffffff
 				border-radius 50%
@@ -346,18 +357,19 @@ button
 			
 	&--character
 		position absolute
-		right -90px
+		right 15px
 		bottom 0
 		z-index 1
 		display block
-		width 361px
-		height 391px
+		width 270px
+		height 292px
 		background url('../img/hero-character.svg') no-repeat 100% 100%
+		background-size 100% 100%
 		
 	&--circle
 		position absolute
-		right 521px
-		bottom 215px
+		right 384px
+		bottom 100px
 		z-index 5
 		display block
 		width 25px
@@ -367,8 +379,8 @@ button
 		
 	&--plus
 		position absolute
-		right 169px
-		bottom 416px
+		right 123px
+		bottom 431px
 		z-index 5
 		display block
 		width 57px
@@ -402,8 +414,8 @@ button
 	position relative
 	z-index 2
 	display block
-	font-size 120px
-	line-height 120px
+	font-size 100px
+	line-height 100px
 	font-weight 600
 	padding 0
 	
@@ -415,8 +427,8 @@ button
 		content attr(data)
 		position absolute
 		color colorLight
-		font-size 220px
-		line-height 220px
+		font-size 200px
+		line-height 200px
 		font-weight 600
 		white-space nowrap
 		text-transform uppercase
@@ -424,50 +436,63 @@ button
 .about
 	position relative
 	z-index 1
+		
+	&--circle_big
+		position absolute
+		left 50%
+		top -23px
+		z-index 5
+		display block
+		width 48px
+		height 48px
+		margin-left -337px
+		background #ffffff
+		border-radius 50%
+		box-shadow 0 0 20px 20px rgba(0, 0, 0, 0.1)
 	
 	&__row
 		position relative
-		width 1400px
-		padding 220px 30px 76px
+		width 1110px
+		padding 165px 30px 197px
 		margin 0 auto
 	
 		&:before
 			content ''
 			position absolute
-			right 533px
+			right 396px
 			top 0
 			width 2px
-			height 399px
+			height 177px
 			background #f2f2f2
 		
 		&:after
 			content ''
 			position absolute
-			right 197px
+			right 150px
 			top 0
 			width 2px
-			height 398px
+			height 343px
 			background #f2f2f2
 	
 	.title
-		margin 0 0 57px 126px
+		margin 0 0 118px
 		
 		&:after
-			left 274px
-			top -89px
+			left 214px
+			top -59px
 		
 	&__content
 		position relative
 		
 		p
-			max-width 820px
-			font-size 19px
+			max-width 680px
+			font-size 16px
 			line-height 26px
 			margin 0 0 26px
 			
 	&-stats
 		font-size 0
-		margin 67px 0 0 -10px
+		margin 73px 0 0 -7px
 		
 		&--item
 			display inline-block
@@ -482,7 +507,7 @@ button
 			align-items center
 			width 82px
 			height 82px
-			margin 0 auto 22px
+			margin 0 auto 16px
 			border 2px solid colorLight
 			border-radius 50%
 			
@@ -500,47 +525,48 @@ button
 			
 	&--globe
 		position absolute
-		left 914px
-		top 43px
-		width 523px
-		height 521px
+		left 727px
+		top -10px
+		width 400px
+		height 399px
 		background url('../img/globe.gif') no-repeat 0 0
+		background-size 100% 100%
 		
 .history
 	position relative
 	z-index 2
-	padding 304px 0 0
+	padding 196px 0 0
 	border-bottom 2px solid #d3d3d3
 	
 	&:before
 		content ''
 		position absolute
 		right 50%
-		top -313px
+		top -112px
 		width 2px
-		height 617px
-		margin-right -200px
+		height 308px
+		margin-right -159px
 		background colorLight
 	
 	&:after
 		content ''
 		position absolute
 		right 50%
-		top -89px
+		top -287px
 		width 2px
-		height 393px
-		margin-right -436px
+		height 483px
+		margin-right -405px
 		background colorLight
 	
 	&--circle
 		position absolute
 		right 50%
-		top 36px
+		top -132px
 		z-index 2
 		display block
-		width 30px
-		height 30px
-		margin-right -214px
+		width 25px
+		height 25px
+		margin-right -170px
 		background #003260
 		border-radius 50%
 	
@@ -549,34 +575,36 @@ button
 		
 	&__title
 		position relative
-		width 1400px
-		padding 1px 30px 91px
+		width 1110px
+		padding 1px 30px 63px
 		margin 0 auto
 
 	.title
-		margin -75px 0 50px 735px
+		margin -58px 0 50px 631px
 		
 		&:after
-			left -89px
-			top -45px
+			left -119px
+			top -46px
 		
 	&--character
 		position absolute
-		left 266px
-		top -304px
+		left 351px
+		top -196px
+		z-index 2
 		display block
-		width 391px
-		height 390px
+		width 252px
+		height 251px
 		background url('../img/history-character.svg') no-repeat 0 0
+		background-size 100% 100%
 		
 	&-elem
 		position absolute
-		left 3px
+		left 35px
 		top -132px
 		z-index 1
 		display block
-		width 263px
-		height 263px
+		width 230px
+		height 230px
 		border 2px solid #d3d3d3
 		border-radius 50%
 		
@@ -596,33 +624,33 @@ button
 				position absolute
 				left 50%
 				top -10px
-				width 20px
-				height 20px
-				margin-left -20px
+				width 17px
+				height 17px
+				margin-left -8px
 				background #c62032
 				border-radius 50%
 			
 		&:before
 			content ''
 			position absolute
-			left 21px
-			top 21px
-			width 217px
-			height 217px
+			left 22px
+			top 22px
+			width 186px
+			height 186px
 			border 2px solid #d3d3d3
 			border-radius 50%
 			
 		&--icon
 			position absolute
-			left 52px
-			top 52px
+			left 48px
+			top 48px
 			z-index 2
 			display block
 			display flex
 			justify-content center
 			align-items center
-			width 155px
-			height 155px
+			width 134px
+			height 134px
 			text-align center
 			background #ffffff
 			box-shadow 0 0 20px 20px rgba(0, 0, 0, 0.1)
@@ -630,45 +658,46 @@ button
 			
 	&-slider
 		&__col
-			width 1400px
+			width 1110px
 			font-size 0
 			padding 0 30px
 			margin 0 auto
 			
 		&__content
 			display inline-block
-			width calc(100% - 564px)
+			width calc(100% - 381px)
 			padding 0 80px 0 0
 			
 			p
-				font-size 19px
+				max-width 540px
+				font-size 16px
 				line-height 26px
 				margin 0 0 26px
 			
 		&--pic
 			display inline-block
-			width 564px
-			height 375px
+			width 381px
+			height 260px
 			margin 0 0 26px
 			
 .timeline
 	position relative
-	width 1340px
-	padding 0 100px
-	margin 98px auto 0
+	width 1050px
+	padding 0 60px
+	margin 74px auto 0
 	opacity 0
 	transition .2s ease
 	user-select none
 	
 	&-arrow
 		position absolute
-		bottom -21px
-		left 100px
+		bottom -18px
+		left 60px
 		z-index 5
 		display block
-		width 40px
-		height 40px
-		margin-left -20px
+		width 30px
+		height 30px
+		margin-left -15px
 		background #c62032
 		border-radius 50%
 	
@@ -681,15 +710,15 @@ button
 			position absolute
 			top 0
 			z-index 5
-			width 20px
-			height 64px
+			width 10px
+			height 50px
 			
 		&:before
-			left 100px
+			left 60px
 			background linear-gradient(to right, rgba(242,242,242,1) 0%,rgba(255,255,255,0) 100%)
 			
 		&:after
-			right 100px
+			right 60px
 			background linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(242,242,242,1) 100%)
 	
 	&.is-visible
@@ -704,11 +733,11 @@ button
 	&-prev
 	&-next
 		position absolute
-		top -6px
+		top -1px
 		z-index 5
 		display block
-		width 72px
-		height 72px
+		width 52px
+		height 52px
 		cursor pointer
 		border-radius 50%
 		
@@ -716,6 +745,9 @@ button
 			cursor default
 		
 		svg
+			width 100%
+			height auto
+			
 			g 
 				transition stroke .1s ease-in
 			
@@ -737,21 +769,21 @@ button
 
 	&__item
 		display inline-block
-		height 107px
+		height 83px
 		color #d3d3d3
-		font-size 24px
-		line-height 30px
+		font-size 22px
+		line-height 28px
 		font-weight 600
 		text-align center
-		padding 15px 0
+		padding 11px 0
 		
 		span
 			cursor pointer
 		
 		&.is-current
 			color colorBlack
-			font-size 60px
-			line-height 60px
+			font-size 50px
+			line-height 50px
 			padding 0
 			
 @keyframes fly
@@ -777,8 +809,8 @@ button
 	
 	&--circle
 		position absolute
-		right 493px
-		top 458px
+		right 387px
+		top 167px
 		z-index 1
 		display block
 		width 20px
@@ -788,8 +820,8 @@ button
 		
 	&--plus
 		position absolute
-		right 144px
-		top 341px
+		right 123px
+		top 305px
 		z-index 1
 		display block
 		width 57px
@@ -810,23 +842,23 @@ button
 	
 	&__row
 		position relative
-		max-width 1400px
-		padding 257px 30px 0
+		max-width 1110px
+		padding 187px 30px 0
 		margin 0 auto
 		
 		&:before
 			content ''
 			position absolute
-			right 502px
+			right 396px
 			top 0
 			width 2px
-			height 473px
+			height 177px
 			background colorLight
 		
 		&:after
 			content ''
 			position absolute
-			right 171px
+			right 151px
 			top 0
 			width 2px
 			height 100%
@@ -835,28 +867,57 @@ button
 	.title
 		position relative
 		z-index 1
-		margin 0 0 124px 120px
+		margin 0 0 97px 31px
 		
 		&:after
-			left -86px
+			left -115px
 			top -62px
 			
 	&-we
 		position relative
-		width 650px
-		height 520px
-		margin 0 0 0 -30px
-		background url('../pic/values-we.png') no-repeat 50% 100%
-		background-size cover
+		width 567px
+		height 378px
 		
+		&--pic
+			position absolute
+			left 0
+			top 0
+			width 100%
+			height 100%
+			transition transform .4s ease-in, opacity .4s ease-in
+			transition-delay 0
+			transform translateX(-20px)
+			opacity 0
+			
+			&.is-visible
+				transform translateX(0)
+				opacity 1
+				transition-delay .2s
+
+			&_1
+				background url('../pic/values-we.png') no-repeat 50% 0
+				background-size 100% auto
+
+			&_2
+				background url('../pic/values-we.png') no-repeat 50% 0
+				background-size 100% auto
+
+			&_3
+				background url('../pic/values-we.png') no-repeat 50% 0
+				background-size 100% auto
+
+			&_4
+				background url('../pic/values-we.png') no-repeat 50% 0
+				background-size 100% auto
+
 	&-nav
 		position absolute
 		left 50%
 		top 0
 		z-index 5
-		width 365px
-		height 365px
-		margin -182px 0 0 -182px
+		width 200px
+		height 200px
+		margin -103px 0 0 -100px
 		background #ffffff
 		border-radius 50%
 		box-shadow 0 0 20px 20px rgba(0, 0, 0, .1)
@@ -867,9 +928,10 @@ button
 			top -15px
 			z-index 5
 			display block
-			width 395px
-			height 395px
-			background url('../img/values-nav-wheel.svg') no-repeat 6px 13px
+			width 230px
+			height 230px
+			background url('../img/values-nav-wheel.svg') no-repeat 4px 14px
+			background-size 220px 202px
 			transition transform .2s ease-in
 				
 			&_1
@@ -887,27 +949,27 @@ button
 		&--title
 			display block
 			color colorBlue
-			font-size 160px
-			line-height 160px
+			font-size 80px
+			line-height 80px
 			font-weight 600
 			text-align center
 			text-transform uppercase
-			padding 104px 0 101px
+			padding 61px 0 59px
 			
 		&--link
 			position absolute
 			left 100px
 			top -200px
 			display block
-			height 96px
+			height 72px
 			color #d3d3d3
-			font-size 24px
-			line-height 30px
+			font-size 19px
+			line-height 26px
 			font-weight 600
 			text-decoration underline
 			white-space nowrap
 			cursor pointer
-			padding 37px 36px 25px
+			padding 20px 22px 8px
 			background-color transparent
 			border-radius 48px
 			border 2px solid transparent
@@ -927,65 +989,69 @@ button
 
 			&.is-active
 				color colorBlack
-				font-size 30px
-				line-height 36px
+				font-size 22px
+				line-height 28px
 				text-decoration none
-				padding 27px 40px 29px
+				padding 17px 22px 15px
 				background-color #ffffff
 				border-color #c62032
 			
 				&:after
+					z-index -1
 					opacity 1
 			
 			&_1
-				left 170px
-				top -296px
+				left 90px
+				top -234px
 				
 				&:after
-					left 22px
-					top 92px
+					left -10px
+					top 70px
 					width 85px
-					height 199px
+					height 163px
 					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI4NXB4IiBoZWlnaHQ9IjE5OXB4IiB2aWV3Qm94PSIwIDAgODUgMTk5IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPjVEQjA5NjY4LTI0REMtNEUwRi04ODkwLTFGNEVGRUZBNzg5QjwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTE0Ni4wMDAwMDAsIC0yNzI1LjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cG9seWxpbmUgaWQ9IkxpbmUtNCIgcG9pbnRzPSIxMjI5LjEyOTQ4IDI3MjYuOTE3ODYgMTIyOS4xMjk0OCAyNzkwLjQxNTg2IDExNDggMjkyMi41NDU3Ij48L3BvbHlsaW5lPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
+					background-position 0 -17px
 			
 			&_2
-				left 313px
-				top -187px
+				left 189px
+				top -158px
+				
+				&:after
+					left -91px
+					top 35px
+					width 90px
+					height 124px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMjdweCIgaGVpZ2h0PSIxNDFweCIgdmlld0JveD0iMCAwIDEyNyAxNDEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+MDVDNDE2OUMtNkZBNy00MzRELTk5NDgtRjFFNjU4OUY3NDkwPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPiAgICAgICAgPGcgaWQ9ImJ1dHRvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTQwLjAwMDAwMCwgLTQxMjguMDAwMDAwKSIgc3Ryb2tlPSIjQzYyMDMyIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iTGluZS00IiBwb2ludHM9IjEyNjUuMTY3MDUgNDEyOS42NDE4MSAxMjA1LjA4NzU1IDQxMjkuNjQxODEgMTE0MiA0MjY3Ij48L3BvbHlsaW5lPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
+					background-size 105px 121px
+			
+			&_3
+				left 252px
+				top -79px
+				
+				&:after
+					left -94px
+					top 25px
+					width 94px
+					height 87px
+					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMDlweCIgaGVpZ2h0PSI3NnB4IiB2aWV3Qm94PSIwIDAgMTA5IDc2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPjcxQzRBRkY3LTA2MkQtNDJCQS05RTBGLUM5NDJFNzJBMkYwODwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTI1OS4wMDAwMDAsIC01NTkyLjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cG9seWxpbmUgaWQ9IkxpbmUtNCIgcG9pbnRzPSIxMzY2LjAxODIxIDU1OTMgMTMxOS4wMDkxMSA1NTkzIDEyNjEuMzI4ODYgNTY2Ni42Mjk2OCI+PC9wb2x5bGluZT4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
+					background-size 94px 87px
+
+			&_4
+				left 305px
+				top -3px
 				
 				&:after
 					left -126px
-					top 46px
-					width 127px
-					height 141px
-					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMjdweCIgaGVpZ2h0PSIxNDFweCIgdmlld0JveD0iMCAwIDEyNyAxNDEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+MDVDNDE2OUMtNkZBNy00MzRELTk5NDgtRjFFNjU4OUY3NDkwPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPiAgICAgICAgPGcgaWQ9ImJ1dHRvbnMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTQwLjAwMDAwMCwgLTQxMjguMDAwMDAwKSIgc3Ryb2tlPSIjQzYyMDMyIiBzdHJva2Utd2lkdGg9IjIiPiAgICAgICAgICAgIDxwb2x5bGluZSBpZD0iTGluZS00IiBwb2ludHM9IjEyNjUuMTY3MDUgNDEyOS42NDE4MSAxMjA1LjA4NzU1IDQxMjkuNjQxODEgMTE0MiA0MjY3Ij48L3BvbHlsaW5lPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+')
-			
-			&_3
-				left 416px
-				top -73px
-				
-				&:after
-					left -110px
-					top 45px
-					width 109px
-					height 76px
-					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMDlweCIgaGVpZ2h0PSI3NnB4IiB2aWV3Qm94PSIwIDAgMTA5IDc2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPjcxQzRBRkY3LTA2MkQtNDJCQS05RTBGLUM5NDJFNzJBMkYwODwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTI1OS4wMDAwMDAsIC01NTkyLjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cG9seWxpbmUgaWQ9IkxpbmUtNCIgcG9pbnRzPSIxMzY2LjAxODIxIDU1OTMgMTMxOS4wMDkxMSA1NTkzIDEyNjEuMzI4ODYgNTY2Ni42Mjk2OCI+PC9wb2x5bGluZT4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
-
-			&_4
-				left 484px
-				top 34px
-				
-				&:after
-					left -124px
-					top 47px
-					width 124px
-					height 74px
+					top 32px
+					width 133px
+					height 50px
 					background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSIxMjRweCIgaGVpZ2h0PSI3NHB4IiB2aWV3Qm94PSIwIDAgMTI0IDc0IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPiAgICAgICAgPHRpdGxlPkVEQjU3QzE5LTlFQkYtNEJCRi1CNDMxLUVCN0YxMTFDRDY0MzwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIj4gICAgICAgIDxnIGlkPSJidXR0b25zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMxMy4wMDAwMDAsIC03MjAxLjAwMDAwMCkiIHN0cm9rZT0iI0M2MjAzMiIgc3Ryb2tlLXdpZHRoPSIyIj4gICAgICAgICAgICA8cGF0aCBkPSJNMTQzNi4yMDMzNiw3MjAyLjcxNTExIEwxMzc1LjI5NTQyLDcyNzMuNDEwMTIgQzEzMjcuOTkyNDQsNzI3My40MTAxMiAxMzA4LjI0OTcyLDcyNzMuNDEwMTIgMTMxNi4wNjcyOCw3MjczLjQxMDEyIiBpZD0iTGluZS00IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMzc1LjMwMzc2NywgNzIzOC4wNjI2MTkpIHJvdGF0ZSgtMTgwLjAwMDAwMCkgdHJhbnNsYXRlKC0xMzc1LjMwMzc2NywgLTcyMzguMDYyNjE5KSAiPjwvcGF0aD4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==')
-				
+					
 		
 	&-content
 		position relative
 		z-index 2
-		min-height 649px
+		min-height 485px
 		background #00162b url('../pic/values-content.jpg') no-repeat 50% 50%
 		background-size cover
 		
@@ -1002,47 +1068,46 @@ button
 	&-slider
 		position relative
 		z-index 2
-		max-width 1400px
+		max-width 1110px
 		color #ffffff
-		padding 212px 0 1px
+		padding 114px 0 1px
 		margin 0 auto
 		
 		&--title
 			display block
 			max-width 960px
 			min-height 66px
-			font-size 24px
-			line-height 33px
-			font-weight 600
+			font-size 19px
+			line-height 26px
 			text-align center
 			padding 0
-			margin 0 auto 54px
+			margin 0 auto 27px
 			
 		&__grid
 			font-size 0
 			text-align center
-			margin 0 -25px
+			margin 0 -15px
 			
 		&__col
 			position relative
 			display inline-block
-			min-height 111px
 			width 33.33%
-			padding 0 25px
-			margin 0 0 40px
+			min-height 92px
+			padding 0 15px
+			margin 0 0 23px
 			
 		&--content
 			position relative
 			display table
 			width 100%
 			text-align left
-			padding 0 0 0 90px
+			padding 0 0 0 84px
 			
 			p
 				display table-cell
-				height 78px
-				font-size 19px
-				line-height 26px
+				height 66px
+				font-size 16px
+				line-height 22px
 				vertical-align middle
 				margin 0
 				
@@ -1051,10 +1116,52 @@ button
 			left 0
 			top -1px
 			display block
-			width 72px
-			height 72px
+			display flex
+			align-items center
+			justify-content center
+			text-align center
+			width 62px
+			height 62px
+			background-repeat no-repeat
+			background-position 50% 50%
 			border 2px solid #fff4f4
 			border-radius 50%
+			
+			&_1
+				background-image url('../img/values-icon-1.svg')
+				background-position 50% 9px
+			
+			&_2
+				background-image url('../img/values-icon-2.svg')
+				background-position 50% 10px
+			
+			&_3
+				background-image url('../img/values-icon-3.svg')
+				background-position 50% 10px
+			
+			&_4
+				background-image url('../img/values-icon-4.svg')
+				background-position 50% 15px
+			
+			&_5
+				background-image url('../img/values-icon-5.svg')
+				background-position 50% 11px
+			
+			&_6
+				background-image url('../img/values-icon-6.svg')
+				background-position 50% 12px
+			
+			&_7
+				background-image url('../img/values-icon-7.svg')
+				background-position 50% 12px
+			
+			&_8
+				background-image url('../img/values-icon-8.svg')
+				background-position 50% 9px
+			
+			&_9
+				background-image url('../img/values-icon-9.svg')
+				background-position 50% 10px
 			
 .play-icon
 	position relative
@@ -1079,7 +1186,7 @@ button
 			
 .stories
 	position relative
-	padding 299px 0 20px
+	padding 237px 0 0
 	
 	&:before
 	&:after
@@ -1092,45 +1199,22 @@ button
 		background colorLight
 	
 	&:before
-		margin-right -166px
+		margin-right -159px
 	
 	&:after
-		margin-right -497px
+		margin-right -405px
 		
 	&--circle_1
 		position absolute
 		left 50%
-		top -36px
+		bottom 162px
 		z-index 5
 		display block
 		width 20px
 		height 20px
-		margin-left 155px
+		margin-left 148px
 		background colorBlue
 		border-radius 50%
-		
-	&--plus
-		position absolute
-		right 50%
-		bottom 64px
-		z-index 5
-		display block
-		width 57px
-		height 57px
-		margin-right -524px
-		
-		&:before
-		&:after
-			content ''
-			position absolute
-			left 22px
-			top 0
-			width 13px
-			height 100%
-			background #c62032
-			
-		&:after
-			transform rotate(90deg)
 		
 	&--circle_2
 		position absolute
@@ -1147,37 +1231,40 @@ button
 	&__title
 		position relative
 		z-index 1
-		max-width 1400px
+		max-width 1100px
 		padding 0 30px
-		margin 0 auto 153px
+		margin 0 auto 91px
 		
 	.title
-		margin 0 0 0 670px
+		margin 0 0 0 474px
 		
 		&:after
-			left -396px
-			top -82px
+			left -299px
+			top -55px
 			
 	&__row
 		position relative
 		z-index 1
 			
 	&-slider
-		margin 0 0 58px
+		margin 4px 0 0
 		
 		.slick-prev
 		.slick-next
 			position absolute
-			top 216px
+			top 232px
 			z-index 5
-			width 72px
-			height 72px
+			width 52px
+			height 52px
 			cursor pointer
 			padding 0
 			background transparent
 			border-radius 50%
 		
 			svg
+				width 100%
+				height auto
+				
 				g 
 					transition stroke .1s ease-in
 				
@@ -1188,16 +1275,16 @@ button
 			
 		.slick-prev
 			left 50%
-			margin-left -670px
+			margin-left -525px
 			
 		.slick-next
 			right 50%
-			margin-right -670px
+			margin-right -525px
 		
 		&__row
-			max-width 1400px
+			max-width 1110px
 			font-size 0
-			padding 72px 30px
+			padding 103px 30px 120px
 			margin 0 auto
 			
 		&__lc
@@ -1210,31 +1297,35 @@ button
 		&--pic
 			position relative
 			display block
-			width 470px
-			height 365px
+			width 400px
+			height 310px
 			
 			.play-icon
 				position absolute
 				left 50%
 				top 50%
-				margin -15px 0 0 -24px
+				margin -30px 0 0 -30px
 				
 		&--text
 			position relative
 			z-index 1
 			display inline-block
-			min-width 360px
-			max-width 100%
+			width calc(100% + 70px)
+			min-height 50px
 			color #ffffff
-			font-size 24px
-			line-height 33px
+			font-size 19px
+			line-height 26px
 			font-weight 600
-			padding 13px 30px 19px
-			margin -32px 0 0 -40px
+			padding 11px 20px 10px
+			margin -20px 0 0 -50px
+			
+			&_dummy
+				min-height 66px
+				
 			
 		&__content
 			display inline-block
-			padding-top 3px
+			padding-top 10px
 			
 			ul
 				margin 0 0 -41px
@@ -1258,31 +1349,31 @@ button
 			
 		&_l
 			& ^[-1]__lc
-				margin-left 192px
+				margin-left 117px
 
 			& ^[-1]--text
 				background #c60c30
 				
 			& ^[-1]__content
-				width 416px
-				margin-left 142px
+				width 280px
+				margin-left 141px
 			
 		&_r
 			background-color colorLight
 
 			& ^[-1]__lc
-				margin-left 100px
+				margin-left 103px
 
 			& ^[-1]--text
 				background colorBlue
 				
 			& ^[-1]__content
-				width 423px
-				margin-left 192px
+				width 280px
+				margin-left 148px
 				
 .people
 	position relative
-	padding 205px 0 51px
+	padding 224px 0 0
 	
 	&:before
 	&:after
@@ -1294,26 +1385,49 @@ button
 		background colorLight
 	
 	&:before
-		height 427px
-		margin-right -166px
+		height 635px
+		margin-right -160px
 	
 	&:after
-		height 594px
-		margin-right -497px
+		height 690px
+		margin-right -406px
+		
+	&--plus
+		position absolute
+		right 50%
+		top -135px
+		z-index 5
+		display block
+		width 57px
+		height 57px
+		margin-right -433px
+		
+		&:before
+		&:after
+			content ''
+			position absolute
+			left 22px
+			top 0
+			width 13px
+			height 100%
+			background #c62032
+			
+		&:after
+			transform rotate(90deg)
 	
 	&__title
 		position relative
 		z-index 1
-		max-width 1400px
+		max-width 1110px
 		padding 0 30px
-		margin 0 auto 193px
+		margin 0 auto 160px
 		
 	.title
-		margin 0 0 0 84px
+		margin 0 0 0 -146px
 		
 		&:after
-			left -200px
-			top -68px
+			left -199px
+			top -67px
 			
 	&__row
 		position relative
@@ -1322,42 +1436,65 @@ button
 		
 	&__content
 		position relative
-		max-width 1340px
-		height 1596px
+		max-width 1050px
+		height 1424px
 		margin 0 auto
 		
 	&--photo
-		overflow hidden
 		position absolute
 		z-index 5
 		display block
-		width 117px
-		height 156px
+		width 108px
+		height 144px
 		cursor pointer
 	
 		&:before
 			content ''
 			position absolute
-			left -4px
-			top -4px
-			width calc(100% + 8px)
-			height calc(100% + 8px)
+			left 0
+			top 0
+			width 100%
+			height 100%
 			border 4px solid #c60c30
 			opacity 0
-			transition all .2s ease-in
+			transition opacity .2s ease-in
+				
+		.play-icon
+		.text-icon
+			position absolute
+			right -28px
+			top -20px
+			opacity 0
+			transition opacity .2s ease-in
+	
+		.play-icon
+			background #c60c30
+			
+		.text-icon
+			display block
+			width 60px
+			height 60px
+			background #c60c30 url('../img/text-icon.svg') no-repeat 0 0
+			border-radius 50%
 			
 		&:hover
 		&:active
 			&:before
-				left 0
-				top 0
-				width 100%
-				height 100%
 				opacity 1
+				
+		&:hover
+			.play-icon
+			.text-icon
+				opacity 1
+				
+		&:active
+			.play-icon
+			.text-icon
+				opacity 0
 				
 .footer
 	position relative
-	height 677px
+	height 484px
 	
 	&:before
 	&:after
@@ -1369,12 +1506,12 @@ button
 		background colorLight
 		
 	&:before
-		height 553px
+		height 494px
 		margin-right 191px
 		
 	&:after
-		height 604px
-		margin-right -164px
+		height 490px
+		margin-right -168px
 		
 	&--elem-v
 		position absolute
@@ -1382,8 +1519,8 @@ button
 		bottom 0
 		display block
 		width 2px
-		height 738px
-		margin-right -499px
+		height 474px
+		margin-right -405px
 		background colorLight
 		
 	&--elem-h
@@ -1400,7 +1537,7 @@ button
 	&--circle
 		position absolute
 		right 50%
-		top 115px
+		top -19px
 		z-index 3
 		display block
 		width 20px
@@ -1412,12 +1549,12 @@ button
 	&--circle_big
 		position absolute
 		right 50%
-		bottom 136px
+		bottom 141px
 		z-index 3
 		display block
 		width 30px
 		height 30px
-		margin-right -178px
+		margin-right -182px
 		background colorBlue
 		border-radius 50%
 	
@@ -1426,34 +1563,34 @@ button
 		left 0
 		z-index 1
 		display block
-		top 240px
+		top 169px
 		width 100%
-		height 199px
+		height 136px
 		background #c60c30
 		
 	&--character
 		position absolute
 		left 50%
-		top 0
+		top 14px
 		z-index 2
 		display block
-		width 310px
-		height 563px
-		margin-left -612px
+		width 228px
+		height 414px
+		margin-left -529px
 		background url('../img/footer-character.svg') no-repeat 0 0
 		
 	&--title
 		display block
 		position absolute
 		left 50%
-		top 307px
+		top 217px
 		z-index 2
 		display block
 		color #ffffff
-		font-size 150px
-		line-height 150px
+		font-size 100px
+		line-height 100px
 		font-weight 600
-		margin-left -218px
+		margin-left -116px
 
 .modal
 	position absolute
@@ -1462,7 +1599,7 @@ button
 	z-index 1010
 	width 800px
 	font-size 0
-	padding 59px 58px 65px
+	padding 59px 58px 51px
 	margin-left -400px
 	background #ffffff
 	box-shadow 0 2px 20px 20px rgba(0, 0, 0, .1)
@@ -1543,14 +1680,21 @@ button
 		
 		p
 			color #373737
-			font-size 19px
+			font-size 16px
 			line-height 26px
 			margin 0 0 26px
+			
+	&--welcome
+		display block
+		color #3e3f3e
+		font-size 19px
+		line-height 26px
+		margin 0 0 26px
 			
 	&--name
 		display block
 		color #154277
-		font-size 34px
-		line-height 40px
+		font-size 24px
+		line-height 30px
 		font-weight 600
-		margin -14px 0 36px
+		margin -15px 0 38px

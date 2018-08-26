@@ -143,6 +143,8 @@ $(function() {
 			var id = t.attr('data');
 			wheel.removeClass().addClass('values-nav--wheel values-nav--wheel_'+id);
 			$('.values-slider').slick('slickGoTo', id-1);
+			var pics = $('.values-we--pic');
+			pics.filter('[data="'+id+'"]').addClass('is-visible').siblings().removeClass('is-visible');
 		}
 	});
 	
@@ -157,8 +159,8 @@ $(function() {
 		adaptiveHeight: true,
 		draggable: false
 	});
-	$('.stories-slider .slick-prev').html('<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72"><g fill="none" fill-rule="evenodd" stroke="#D3D3D3" stroke-width="2" transform="rotate(-180 35.5 35.5)"><circle cx="35" cy="35" r="35"/><path stroke-linecap="square" d="M31 19l12.547 16.5L31 52"/></g></svg>');
-	$('.stories-slider .slick-next').html('<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72"><g fill="none" fill-rule="evenodd" stroke="#D3D3D3" stroke-width="2" transform="translate(1 1)"><circle cx="35" cy="35" r="35"/><path stroke-linecap="square" d="M31 19l12.547 16.5L31 52"/></g></svg>');
+	$('.stories-slider .slick-prev').html('<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"><g fill="none" fill-rule="evenodd"><g stroke="#D3D3D3" stroke-width="2" transform="rotate(-180 25.5 25.5)"> <circle cx="25" cy="25" r="25"/><path stroke-linecap="square" d="M20 11.667l10.456 13.75L20 39.167"/></g></g></svg>');
+	$('.stories-slider .slick-next').html('<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52"><g fill="none" fill-rule="evenodd"><g stroke="#D3D3D3" stroke-width="2" transform="translate(1 1)"> <circle cx="25" cy="25" r="25"/> <path stroke-linecap="square" d="M20 11.667l10.456 13.75L20 39.167"/></g></g></svg>');
 	
 	$(document).on('scroll', function() {
 		$('[data-parallax]').each(function() {
@@ -193,11 +195,11 @@ $(function() {
 	});
 
 	var timeline = $('.timeline');
-	var totalWidth = timeline.outerWidth();
+	var totalWidth = timeline.outerWidth()-120;
 	var content = timeline.find('.timeline__row');
 	
 	var visible = 7;
-	var activeScale = 1.233;
+	var activeScale = 1.015;
 	var piece = totalWidth/(visible-1+activeScale);
 	
 	var items = timeline.find('.timeline__item');
@@ -259,7 +261,7 @@ $(function() {
 	nextButton.on('click', function() {
 		if ( !$(this).hasClass('is-disabled') ) {
 			currentID++;
-			if ( currentID-position >= visible-1 ) {
+			if ( currentID-position >= visible ) {
 				position++;
 				movePosition(position);
 			}

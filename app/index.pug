@@ -2,7 +2,7 @@ doctype html
 html(lang='en')
 	title ABBYY
 	meta(charset='utf-8')
-	meta(name='viewport', content='width=1420, user-scalable=yes')
+	meta(name='viewport', content='width=1130, user-scalable=yes')
 	link(href='./css/style.css', rel='stylesheet')
 	body
 		.hero
@@ -11,11 +11,12 @@ html(lang='en')
 				.hero--lang
 					a(href='') Rus
 					a(href='') Eng
-				span.hero--title
-				p.hero--description Welcome to ABBYY journey! Here you will find out: What is ABBYY? Where we come from? What we believe in and how we develop our company? What we value in ABBYY people? Enjoy the discovery!
-				.hero__controls
-					a.hero--button.hero--button_play(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox) #[i] Play Video
-					button.hero--button.hero--button_more Discover More
+				.hero__col
+					span.hero--title
+					p.hero--description Welcome to ABBYY journey! Here you will find out: What is ABBYY? Where we come from? What we believe in and how we develop our company? What we value in ABBYY people? Enjoy the discovery!
+					.hero__controls
+						a.hero--button.hero--button_play(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox) #[i]Play Video
+						button.hero--button.hero--button_more Discover More
 				i.hero--character
 				i.hero--circle(data-parallax='300')
 				i.hero--plus(data-parallax='225')
@@ -25,6 +26,7 @@ html(lang='en')
 		.about
 			.about__row
 				span.title(data='What is ABBYY', data-parallax='150') #[span What is ABBYY]
+				i.about--circle_big
 				.about__content
 					p Founded in 1989 by David Yang, then the 4th-year physics student in Moscow, ABBYY is now a truly global company, provider of content intelligence solutions and services. Thousands of organizations, more than 50 million users in 200 countries rely on our solutions.
 					p We create a complete range of technologies based on Artificial Intelligence that transform business documents and content into business value. By providing digital transformation solutions to financial services, insurance, transportation, healthcare and other industries, we help organizations achieve the next wave of growth, understand customers and deliver responsive real-time intelligent systems. 
@@ -32,27 +34,27 @@ html(lang='en')
 					.about-stats
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-1.svg', width='55', height='46', alt='')
 							p Thousands #[br] of corporate customers
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-2.svg', width='49', height='49', alt='')
 							p 1000+ employees
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-3.svg', width='52', height='49', alt='')
 							p 400+ patents and patent applications
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-4.svg', width='47', height='47', alt='')
 							p 11 offices
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-5.svg', width='46', height='47', alt='')
 							p Over 50M users
 						.about-stats--item
 							i.about-stats--icon
-								img(src='./img/icon-city.svg', width='38', height='59', alt='')
+								img(src='./img/icon-stats-6.svg', width='42', height='43', alt='')
 							p Partners in 200+ countries and regions
 					i.about--globe
 		.history
@@ -64,111 +66,235 @@ html(lang='en')
 					.history-elem
 						i.history-elem--animation
 						.history-elem--icon
-							img(src='./img/icon-history.svg', width='108', height='92', alt='')
+							img(src='./img/icon-history.svg', width='93', height='79', alt='')
 				.history-slider
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p • Was opened our office in Japan.
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p David Yang earned a B grade in French. 
+								p On his way to the hostel, it sent him thinking: "wouldn't it be nice to create an electronic dictionary?" That was how BIT Software company was founded, before it was later renamed to ABBYY.
+								p The company was known by this name for 7 years, before it was changed to the now familiar ABBYY. 
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2010
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p We launched the Lingvo electronic dictionary.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2011
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p FineReader 1.0, the first multi – font recognition system in Russia, was released.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2012
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • We organized the first conference-exhibition on electronic document circulation - DOCFLOW. It became the key industry event in Russia.
+								p • The company revived the "Dialog" - the largest scientific conference on computer linguistics in Russia and gave it an international status.
+								p • Our first international office - ABBYY Ukraine - was opened.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2013
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • Our developers created from scratch a technology for searching and retrieving fields on documents. It  served as the basis for the future FlexiCapture.
+								p •	We implemented the first project to automate the input of documents in the Pension Fund of the Russian Federation. The FineReader Vector was released. It not only recognized printed forms, but also allowed the entry of forms, manually filled in block letters.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2014
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • The initial name, BIT Software, was changed to ABBYY Software House.
+								p • It turned out that the original name was quite popular. We found an absolute namesake - Bit Software company - in the city of Moscow, Idaho, USA, which was also engaged in data recognition.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2015
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • Bank FineReader and the technology for recognition of hand-filled forms - the progenitor of FlexiCapture were released.
+								p • The number of users of ABBYY products worldwide reached 3 million people.
+								p • We signed contracts with the manufacturers of MUSTEK and UMAX scanners. ABBYY OCR technology bundled with Primax scanners in more than 30 countries.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2016
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • The ABBYY USA office was opened. The groundwork was laid by Ding Tang’s team, who successfully promoted FineReader in the US.
+								p • Our TestReader for the first time processed the results of the experimental rounds of the Unified State Exam in Russia. Since then, ABBYY technologies help to process the results of the USE every year, and hundreds of thousands of school children learn about their results very quickly.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2017
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • We launched the Lingvo Online service. A year later, Yandex.Dictionaries was released on the basis of Lingvo. And in 2010, a similar project with Mail.ru took off. The online audience of Lingvo-based services has about 3 million people a month!
+								p • ABBYY Europe was established. The core of the European office was Mitcom, the successful German distributor of FineReader.
+								p • ABBYY Enterprise Forms was released - a distributed system for recognizing and entering data from hand-filled forms.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 					.history-slider__item
 						.history-slider__col
 							.history-slider__content
-								p 2018
-								p • In MIPT, the Department of Image Recognition and Text Processing began its work - the basic department of ABBYY. #[br] The company has a new product line - the development of products for mobile platforms.
-								p • ABBYY Recognition Server was released, a solution for streaming documents and organizing electronic archives in companies.
-								p • We signed an agreement on international cooperation with Xerox.
-								p • ABBYY Mobile OCR Engine - a tool for developing images in mobile devices.
+								p • Our first developer product (SDK) - FineReader Engine 5 was released.
+								p • We signed the first contract with PFU (a subsidiary of Fujitsu) and we supply a compact solution - FineReader ScanSnap - for their scanners.
+								p In 2011, the management of PFU decides to become a minority shareholder of ABBYY.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Our developers received the Russian Government’s Science and Technology Prize.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • The number of users of all ABBYY products reached 17 million people.
+								p • We released the Mobile OCR SDK and within a year and a half received one of the most prestigious American Silver Mobile Star Award.
+								p • ABBYY obtained the status of Microsoft Gold Certified partner.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • The offices of ABBYY Russia and ABBYY Cyprus were opened.
+								p • ABBYY PDF Transformer, a program for working with PDF-files was released.
+								p • We announced a tool for processing flexible forms - ABBYY FlexiCapture Studio.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • We developed the first omnifont system that recognizes Fraktur type (a kind of late Gothic letters) and old European languages.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Our office in Japan was opened.
+								p • The Department of Image Recognition and Text Processing  - ABBYY's basic department - began its work in the MIPT.
+								p • The company has a new product line - the development of products for mobile platforms.
+								p • ABBYY Recognition Server was released, a solution for streaming document input and organization of electronic archive in companies.
+								p • We concluded an international cooperation agreement with Xerox.
+								p • ABBYY Mobile OCR Engine - developer toolkit for embedding algorithms for image processing and text recognition into mobile devices was released..
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Translation Bureau "Perevedem.ru" became part of ABBYY and was renamed to ABBYY Language Services.
+								p • FlexiCapture 8 - the "successor" of the FormReader system, a more modern platform for data entry, was released.
+								p • Today, organizations around the world use FlexiCapture to process more than 800 million pages of documents per year. This is a stack of pages of 92 km in height
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p ABBYY Taiwan office opened.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • The number of users of ABBYY products and technologies worldwide exceeded 30 million people.
+								p • The beta version of ABBYY FineReader Online, an online service for working with documents, was released.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • The company entered the market for educational applications. Lingvo and Tutor are delivered together with the textbooks of the "Prosveshchenie" publishing house. The total circulation for three years reached 3.5 million copies.
+								p • Sales of data entry products grew 2-fold for the year, more than twice outpacing the average growth rates of the segment in the mark
+								p • Office of ABBYY 3A (later renamed Emerging Markets), which is responsible for business in emerging markets of Africa, Asia and South America, as well as in the Middle East, was opened.
+								p • Today, ABBYY is the leader in the data entry market in 50 countries on 3 continents with large-scale projects: censuses in Lithuania, Saudi Arabia, Sri Lanka, etc., elections in Colombia and Chile, automation of examinations in India, Brazil and Bangladesh, etc.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • ABBYY Australia office was opened. We created a solution for Cloud OCR SDK developers. In the first ten months, 1 million pages were recognized with our service.
+								p • Our technologies are used in the project to transform the European printed heritage into digital resources IMPACT, which was launched by the European Commission. 
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • CNews Analytics named ABBYY the leader in the market of streaming input of documents and data on the Russian corporate market. The company's products account for 60% of the market.
+								p • We have two new basic departments - at the Physicotechnical Institute and at the Russian State University for the Humanities, students of both are studying computer linguistics.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • ABBYY won a court case on infringement of intellectual property rights against a foreign competitor.
+								p • We signed two large contracts with Samsung and LG for the licensing of ABBYY mobile technologies. Our technologies are pre-installed on more than 100 million devices.
+								p • ABBYY Mobile Data Capture Solution, a software solution that allows the creation of applications for data input from photos taken by a mobile phone camera, was launched. 
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • The number of users of ABBYY products and technologies in the world exceeded 40 million people.
+								p • We announced the release in Russia of the first solutions based on the technology of automatic analysis and understanding of texts.
+								p • The unique crowdsourcing project "All of Tolstoy in One Click", organized jointly by L.N. Tolstoy State Museum, the Yasnaya Polyana Estate Museum and ABBYY, was completed. Thousands of volunteers from 49 countries took part in the project. As a result, a 90-volume collection of works by Leo Tolstoy, including rare works, appeared on the Internet.
+								p • We announced the Lingvo Live online service.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • ABBYY Comparator – a solution for comparison of electronic and paper documents was released. This feature was later added to FineReader. 
+								p • Analyst firm IDC named ABBYY a leader in the segment of streaming data input in Russia. 
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Huawei and ABBYY became strategic partners.
+								p • We launched ABBYY Monitoring, a platform for mass independent diagnostics and assessment of the quality of education of schoolchildren in Russia.
+								p • Information and analytical project DOCFLOW changes its format and organizes DigEn Forum (Digital Enterprise Forum by DOCFLOW) – a new conference and exhibition about current strategies, technologies and practices of digital enterprise management.
+								p • Apple included ABBYY TextGrabber iOS in the global app of the Week for two weeks. Thanks to this, the app was downloaded by more than 1.5 million people from all over the world. ABBYY TextGrabber Android became app of the year in Google Play. 
+								p • The Bolshoi theatre together with ABBYY (with the participation of KAMIS) started a large-scale volunteer project "Open history of the Bolshoi".  The aim of the project is to digitize 48,000 posters, 120,000 programs and more than 100,000 photos from the theatre's archive, which will be included in Bolshoi's electronic database.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Ulf Persson became the new CEO of the ABBYY group of companies, previously he served as chairman of the board of directors.
+								p • ABBYY FineReader 14 was released - a new product that combined all the necessary tools for working with PDF and paper documents.
+								p • We introduced ABBYY Real-Time Recognition (RTR) technology, which is able to extract real-time information not only from documents, but also from surfaces of various objects. Reviews of the technology have come out in the world's leading media, including VentureBeat and Forbes.
+								p • Under the leadership of Ulf Persson, a new global management structure has been created. ABBYY integrated all its offices in 11 countries and built global functions of key departments.
+								p • The new management structure reflects the international approach of ABBYY's business: #OneABBYY. The group's total revenues for 2017 increased by 25%. 
+								p • We achieved this growth for the first time in five years. More than 90% of sales were in the corporate segment.
+							.history-slider--pic
+								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
+					.history-slider__item
+						.history-slider__col
+							.history-slider__content
+								p • Thousands of organizations and more than 50 million users in more than 200 countries and regions of the world use ABBYY solutions and technologies.
 							.history-slider--pic
 								img.img-cover(src='./pic/history-1.jpg', width='564', height='375', alt='')
 				.timeline
 					.timeline__list
 						.timeline__row
+							.timeline__item #[span 1989]
+							.timeline__item #[span 1990]
+							.timeline__item #[span 1993]
+							.timeline__item #[span 1995]
+							.timeline__item #[span 1996]
+							.timeline__item #[span 1997]
+							.timeline__item #[span 1998]
+							.timeline__item #[span 1999]
+							.timeline__item #[span 2000]
+							.timeline__item #[span 2001]
+							.timeline__item #[span 2002]
+							.timeline__item #[span 2003]
+							.timeline__item #[span 2004]
+							.timeline__item #[span 2005]
+							.timeline__item #[span 2006]
+							.timeline__item #[span 2007]
+							.timeline__item #[span 2008]
 							.timeline__item #[span 2009]
 							.timeline__item #[span 2010]
 							.timeline__item #[span 2011]
@@ -186,11 +312,14 @@ html(lang='en')
 					span.timeline-arrow
 		.values
 			.values__row
-				i.values--circle_big
 				i.values--circle(data-parallax='300')
 				i.values--plus(data-parallax='225')
 				span.title(data='Values', data-parallax='150') #[span Values]
 				.values-we
+					.values-we--pic.values-we--pic_1(data='1').is-visible
+					.values-we--pic.values-we--pic_2(data='2')
+					.values-we--pic.values-we--pic_3(data='3')
+					.values-we--pic.values-we--pic_4(data='4')
 			.values-content
 				.values-nav
 					span.values-nav--title We
@@ -198,98 +327,97 @@ html(lang='en')
 					span.values-nav--link.values-nav--link_1.is-active(data='1') Care and go the extra mile
 					span.values-nav--link.values-nav--link_2(data='2') Work as a team
 					span.values-nav--link.values-nav--link_3(data='3') Innovate for customers
-					span.values-nav--link.values-nav--link_4(data='4') Are Open-minded
+					span.values-nav--link.values-nav--link_4(data='4') Open-minded
 				.values-slider
 					.values-slider__item
-						span.values-slider--title We believe we help our customers gain competitive edge by addressing their current and future needs through innovations and technologies.
+						span.values-slider--title We believe that the best results come from being passionate and #[br] taking responsibility for what we do.
 						.values-slider__grid
 							.values-slider__col
 								.values-slider--content
 									i.values-slider--icon.values-slider--icon_1
-									p We strive to be the very best in everything we do. We care about superior execution.
+									p We strive to be the very best in everything we do. We care about superior execution. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We are proactive because we care about the success of our customers.
+									i.values-slider--icon.values-slider--icon_2
+									p We are proactive because we #[br] care about the success of our customers.
 							br
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
+									i.values-slider--icon.values-slider--icon_3
 									p We use our drive to inspire our customers and partners. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We are proud of what we do and who we are.
+									i.values-slider--icon.values-slider--icon_4
+									p We are proud of what we do #[br] and who we are.
 					.values-slider__item
-						span.values-slider--title We believe that strong teamwork and trust are vital for the company’s success. 
+						span.values-slider--title We believe that strong teamwork and trust are #[br] vital for the company’s success. 
 						.values-slider__grid
 							.values-slider__col
 								.values-slider--content
 									i.values-slider--icon.values-slider--icon_1
-									p We value the humanity component of the work. We are open, honest and ethical in our behavior. 
+									p We value the humanity #[br] component of the work. We are open, honest and ethical in our behavior. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
+									i.values-slider--icon.values-slider--icon_3
 									p We acknowledge differences in cultural backgrounds, ideas and opinions. We trust each other.
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We seek what is best for ABBYY rather than ourselves or our group. We work in a transparent way. 
+									i.values-slider--icon.values-slider--icon_2
+									p We seek what is best for ABBYY rather than ourselves or our #[br] group. We work in a #[br] transparent way. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
+									i.values-slider--icon.values-slider--icon_5
 									p We respect individuals #[br] at all levels.
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We celebrate wins of company #[br] and each employee.
+									i.values-slider--icon.values-slider--icon_6
+									p We solve problems together #[br] and not pass the buck or blame others.
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We solve problems together and not pass the buck or blame others.
+									i.values-slider--icon.values-slider--icon_7
+									p We celebrate wins of company #[br] and each employee.
 					.values-slider__item
 						span.values-slider--title We believe we help our customers gain competitive edge by addressing their current and future needs through innovations and technologies.  
 						.values-slider__grid
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p For us innovation is when we connect knowledge about customers with our engineering expertize, thus we create value for our customers. 
+									p For us innovation is when we connect knowledge about customers with our engineering expertize, thus we create value for our customers.
+							.values-slider__col
+								.values-slider--content
+									i.values-slider--icon.values-slider--icon_2
+									p Technology is our passion. We invest our time and knowledge in creating state-of-the-art #[br] intelligent solutions.
+							.values-slider__col
+								.values-slider--content
+									i.values-slider--icon.values-slider--icon_8
+									p We engage and listen to #[br] customers, partners, analysts #[br] and thought leaders to #[br] understand and predict future customer needs.
 							.values-slider__col
 								.values-slider--content
 									i.values-slider--icon.values-slider--icon_1
-									p Technology is our passion. We invest our time and knowledge in creating state-of-the-art intelligent solutions.
+									p In our reality new trends #[br] constantly shift and disrupt markets. We must be agile and ready for changes. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We engage and listen to customers, partners, analysts and thought leaders to understand and predict future customer needs.
-							.values-slider__col
-								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p In our reality new trends constantly shift and disrupt markets. We must be agile and ready for changes. 
-							.values-slider__col
-								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We test areas of potential value and focus on promising ones. We choose our battles and cut our losses. 
+									i.values-slider--icon.values-slider--icon_9
+									p We test areas of potential value and focus on promising ones. #[br] We choose our battles and cut #[br] our losses. 
 					.values-slider__item
 						span.values-slider--title We believe that creativity and innovation come from being open #[br] to new things and learning from mistakes.
 						.values-slider__grid
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
+									i.values-slider--icon.values-slider--icon_2
 									p We continuously learn and are open to external knowledge. We develop, improve and take responsibility. 
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We are tolerant to mistakes. We accept that mistakes are a natural part of growth and improvement.
+									i.values-slider--icon.values-slider--icon_7
+									p We are tolerant to mistakes. We accept that mistakes are a #[br] natural part of growth and improvement.
 							br
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We are open-minded in exploring unchartered territories and taking risks.
+									i.values-slider--icon.values-slider--icon_6
+									p We are open-minded in #[br] exploring unchartered #[br] territories and taking risks.
 							.values-slider__col
 								.values-slider--content
-									i.values-slider--icon.values-slider--icon_1
-									p We analyze our mistakes and wins honestly, and are open to a rapid change of direction if we see fit.
+									i.values-slider--icon.values-slider--icon_9
+									p We analyze our mistakes and #[br] wins honestly, and are open to #[br] a rapid change of direction if we #[br] see fit.
 		.stories
 			.stories__title
 				span.title(data='Top Stories', data-parallax='150') #[span Top Stories]
@@ -303,30 +431,60 @@ html(lang='en')
 								.stories-slider--pic
 									i.play-icon
 									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text ABBYY History
+								span.stories-slider--text I like working on things that change #[br] the world for the better
 							.stories-slider__content
 								ul
 									li
 										span.stories-slider--name David Yang
 										p Founder and director #[br] of the board of ABBYY
-									li
-										span.stories-slider--name Vadim Tereshchenko
-										p COO
 					.stories-slider__item
 						.stories-slider__row
 							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
 								.stories-slider--pic
 									i.play-icon
-									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text ABBYY History
+									img.img-cover(src='./pic/stories-2.jpg', width='470', height='365', alt='')
+								span.stories-slider--text How did ABBYY start? 
 							.stories-slider__content
 								ul
 									li
 										span.stories-slider--name David Yang
 										p Founder and director #[br] of the board of ABBYY
+					.stories-slider__item
+						.stories-slider__row
+							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
+								.stories-slider--pic
+									i.play-icon
+									img.img-cover(src='./pic/stories-3.jpg', width='470', height='365', alt='')
+								span.stories-slider--text David Yang first startup fly
+							.stories-slider__content
+								ul
 									li
-										span.stories-slider--name Vadim Tereshchenko
-										p COO
+										span.stories-slider--name David Yang
+										p Founder and director #[br] of the board of ABBYY
+					.stories-slider__item
+						.stories-slider__row
+							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
+								.stories-slider--pic
+									i.play-icon
+									img.img-cover(src='./pic/stories-4.jpg', width='470', height='365', alt='')
+								span.stories-slider--text David Yang about ABBYY future 
+							.stories-slider__content
+								ul
+									li
+										span.stories-slider--name David Yang
+										p Founder and director #[br] of the board of ABBYY
+					.stories-slider__item
+						.stories-slider__row
+							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
+								.stories-slider--pic
+									i.play-icon
+									img.img-cover(src='./pic/stories-5.jpg', width='470', height='365', alt='')
+								span.stories-slider--text David Every business success based on people
+							.stories-slider__content
+								ul
+									li
+										span.stories-slider--name David Yang
+										p Founder and director #[br] of the board of ABBYY
 			.stories__row
 				.stories-slider.stories-slider_r
 					.stories-slider__item
@@ -334,145 +492,76 @@ html(lang='en')
 							.stories-slider__content
 								ul
 									li
-										span.stories-slider--name Andrey Isaev
-										p Chief Product Officer
-									li
-										span.stories-slider--name Tatiana Danielyan
-										p Deputy Chief Technical Officer
-									li
-										span.stories-slider--name Jupp Stoepetie
-										p Chief Marketing Officer
+										span.stories-slider--name Coming soon
+										p More stories
 							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
 								.stories-slider--pic
 									i.play-icon
-									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text How we develop our technologies #[br] and products
+									img.img-cover(src='./pic/stories-dummy.jpg', width='470', height='365', alt='')
+								span.stories-slider--text.stories-slider--text_dummy
 					.stories-slider__item
 						.stories-slider__row
 							.stories-slider__content
 								ul
 									li
-										span.stories-slider--name Andrey Isaev
-										p Chief Product Officer
-									li
-										span.stories-slider--name Tatiana Danielyan
-										p Deputy Chief Technical Officer
-									li
-										span.stories-slider--name Jupp Stoepetie
-										p Chief Marketing Officer
+										span.stories-slider--name Coming soon
+										p More stories
 							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
 								.stories-slider--pic
 									i.play-icon
-									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text How we develop our technologies #[br] and products
-			.stories__row
-				i.stories--circle_2(data-parallax='300')
-				.stories-slider.stories-slider_l
-					.stories-slider__item
-						.stories-slider__row
-							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
-								.stories-slider--pic
-									i.play-icon
-									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text How we work in Global ABBYY
-							.stories-slider__content
-								ul
-									li
-										span.stories-slider--name Office
-										p Moscow (Global Office, 3A, ABBYY Russia)
-										p USA
-										p Europe (Munich office, UK, France)
-										p Australia, New Zeland and Japan 
-										p Kiev
-					.stories-slider__item
-						.stories-slider__row
-							a.stories-slider__lc(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
-								.stories-slider--pic
-									i.play-icon
-									img.img-cover(src='./pic/stories-1.jpg', width='470', height='365', alt='')
-								span.stories-slider--text How we work in Global ABBYY
-							.stories-slider__content
-								ul
-									li
-										span.stories-slider--name Office
-										p Moscow (Global Office, 3A, ABBYY Russia)
-										p USA
-										p Europe (Munich office, UK, France)
-										p Australia, New Zeland and Japan 
-										p Kiev
+									img.img-cover(src='./pic/stories-dummy.jpg', width='470', height='365', alt='')
+								span.stories-slider--text.stories-slider--text_dummy
 		.people
 			.people__title
-				span.title(data='Top Stories') #[span Top Stories]
+				span.title(data='ABBYY People', data-parallax="150") #[span ABBYY People]
+				i.people--plus(data-parallax='300')
 			.people__row
 				.people__content
-					span.people--photo(data-open='person', style='left:26px;top:-23px')
+					span.people--photo(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox, style='left:243px;top:8px')
+						i.play-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person-1', style='left:794px;top:-35px')
+					span.people--photo(data-open='person-text', style='left:748px;top:119px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:520px;top:55px')
+					span.people--photo(data-open='person-text', style='left:524px;top:243px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:1074px;top:121px')
+					span.people--photo(data-open='person-text', style='left:59px;top:297px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:220px;top:183px')
+					span.people--photo(data-open='person-text', style='left:870px;top:428px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:736px;top:282px')
+					span.people--photo(data-open='person-text', style='left:365px;top:480px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:979px;top:360px')
+					span.people--photo(data-open='person-text', style='left:-28px;top:635px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:354px;top:396px')
+					span.people--photo(data-open='person-text', style='left:762px;top:999px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:103px;top:516px')
+					span.people--photo(data-open='person-text', style='left:207px;top:1111px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:612px;top:516px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:1233px;top:516px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:-14px;top:793px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-						
-					span.people--photo(data-open='person', style='left:1154px;top:793px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:120px;top:1102px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:795px;top:1102px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:1074px;top:1102px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:578px;top:1274px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:282px;top:1333px')
-						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
-					span.people--photo(data-open='person', style='left:957px;top:1411px')
+					span.people--photo(data-open='person-text', style='left:550px;top:1280px')
+						i.text-icon
 						img.img-cover(src='./pic/person-1.jpg', width='117', height='156', alt='')
 		.footer
 			i.footer--line
 			i.footer--character
 			i.footer--elem-v
-			i.footer--elem-h(data-parallax='150')
 			i.footer--circle(data-parallax='300')
 			i.footer--circle_big(data-parallax='150')
 			span.footer--title #ONEABBYY
-		.modal(data-target='person')
+		.modal(data-target='person-text')
 			span.modal--close
 			.modal__lc
 				.modal--pic
 					img(src='./pic/person-1.jpg', width='117', height='156', alt='')
-				a.play-icon(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
-				span.modal--desc Video #[br] About Me
 			.modal__rc
-				p Hello, my name is 
+				span.modal--welcome Hello, my name is 
 				span.modal--name Maria Goryushkina
-				p Short text about me.ABBYY is a global leader of content intelligent solutions and services. ABBYY offers a complete range of AI-based technologies and solutions transforming business documents and content into business value. By providing digital transformation solutions to financial services, insurance, transportation, healthcare and other industries, the company helps organizations achieve the next wave of growth by understanding customers and delivering responsive real-time intelligent systems. 
-		.modal(data-target='person-1')
-			span.modal--close
-			.modal__lc
-				.modal--pic
-					img(src='./pic/person-1.jpg', width='117', height='156', alt='')
-				a.play-icon(href='https://www.youtube.com/watch?v=hnnQpN2vbDc', data-fancybox)
-				span.modal--desc Video #[br] About Me
-			.modal__rc
-				p Hello, my name is 
-				span.modal--name Maria Goryushkina 1
 				p Short text about me.ABBYY is a global leader of content intelligent solutions and services. ABBYY offers a complete range of AI-based technologies and solutions transforming business documents and content into business value. By providing digital transformation solutions to financial services, insurance, transportation, healthcare and other industries, the company helps organizations achieve the next wave of growth by understanding customers and delivering responsive real-time intelligent systems. 
 		script(src='./js/libs.js')
 		script(src='./js/scripts.js')
